@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learn ForEach and filter and map and reduce</h1>
+</body>
+</html>
+
+
+<script>
+
+    let students_data = [
+
+    
+    {name:"Amil", profession : "Software Enginerr" , age:60},
+    {name:"Urooz", profession : "IDD Enginerr" ,  age:10},
+    {name:"Vishal", profession : "Web Developer" , age:30},
+    {name:"Akib", profession : "Software Enginerr", age:20}
+    ]
+
+
+    // 1. foreach 
+
+    students_data.forEach((elem,index)=> console.log(elem.name))
+
+
+    console.log("----------filter start--------")
+
+    //2. filter
+
+    let student_marks =  ["50", "30" ,"40","69", "60","30","44"]
+   
+     
+    let passingmark = student_marks.filter((elem,index)=>{
+
+        return elem >= 40
+
+    } )
+
+    console.log(passingmark)
+
+
+
+
+    // 3 . filter
+
+    console.log("--------------iind Filter Example----------------")
+
+
+
+   let updatedoutput = students_data.filter((elem,index)=> elem.profession == "Software Enginerr"  )
+
+   console.log(updatedoutput)
+
+
+
+
+   console.log("---------------Sorting------------------------")
+
+
+  let sortedarr = student_marks.sort((a,b)=> (a -b) )
+
+  console.log(sortedarr)
+
+
+  console.log("-------sorting another example---------")
+
+
+  let student_data_sort = students_data.sort((c,d)=>{
+
+    return  c.name < d.name ? -1 : 1
+  } )
+  console.log(student_data_sort)
+
+
+
+
+
+</script>
